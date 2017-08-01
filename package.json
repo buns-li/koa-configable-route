@@ -1,0 +1,34 @@
+{
+    "name": "koa-config-route",
+    "version": "1.0.0",
+    "description": "a route handle middleware of koa.js",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha test/test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/buns-li/koa-web-config-route.git"
+    },
+    "keywords": [
+        "koa",
+        "route",
+        "config"
+    ],
+    "author": "buns-li",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/buns-li/koa-web-config-route/issues"
+    },
+    "homepage": "https://github.com/buns-li/koa-web-config-route#readme",
+    "dependencies": {
+        "debug": "^2.6.8",
+        "path-to-regexp": "^1.7.0",
+        "request": "^2.81.0"
+    },
+    "devDependencies": {
+        "chalk": "^2.0.1",
+        "should": "^11.2.1",
+        "supertest": "^3.0.0"
+    }
+}
