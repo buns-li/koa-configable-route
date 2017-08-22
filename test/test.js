@@ -14,12 +14,22 @@ describe('GET', function() {
         server.close()
     })
 
-    it('should return data', function(done) {
+    it.skip('should render json', function(done) {
 
         request(server)
             .get('/weather')
             // .set('Accept', 'application/json')
             .expect('content-type', 'application/json; charset=utf-8')
+            .expect(200, done)
+
+    })
+
+    it('should render html', function(done) {
+
+        request(server)
+            .get('/account/sign-in')
+            // .set('Accept', 'application/json')
+            .expect('content-type', 'text/html; charset=utf-8')
             .expect(200, done)
 
     })

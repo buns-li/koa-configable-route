@@ -43,19 +43,34 @@ app.use(middleware({
     routes: [
 
         {
-            path: '/weather',
-            ctrls: [
+            path: '/account',
+            isgroup: true,
+            subs: [{
+                    path: '/sign-in',
+                    view: 'account/sign-in',
+                    globalContext: {
+                        title: '登录',
+                        description: ''
+                    }
+                },
 
                 {
-                    renderName: 'weather',
-                    type: 'remote',
-                    proxy: {
-                        host: 'v.juhe.cn',
-                        url: '/weather/index?format=2&cityname=%E8%8B%8F%E5%B7%9E&key=JHf55348f7f622552ff69cc1471ba5e4f8',
-                        qs: 'user.getAccountEmail'
+                    path: '/sign-up',
+                    view: 'account/sign-up',
+                    globalContext: {
+                        title: '注册',
+                        description: '用户注册'
+                    }
+                },
+
+                {
+                    path: '/forget',
+                    view: 'account/forget',
+                    globalContext: {
+                        title: '找回密码',
+                        description: 'freeing平台用户找回密码'
                     }
                 }
-
             ]
         }
     ]
